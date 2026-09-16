@@ -52,7 +52,7 @@ export default function HomeClient({ initialBooks, initialSettings }) {
       <footer className="border-t-2 border-stone-300 py-10 bg-white text-center text-xs text-slate-600 font-bold">
         <div className="max-w-7xl mx-auto px-4 space-y-3">
           <p className="font-editorial text-2xl text-slate-950 font-black">{author.name}</p>
-          <p>© {new Date().getFullYear()} {author.name}. All rights reserved. Powered by Next.js & Neon PostgreSQL on Vercel.</p>
+          <p>© {new Date().getFullYear()} {author.name}. All rights reserved.</p>
         </div>
       </footer>
 
