@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Joshua Adeoluwa — Author & Thinker | Books & Publications</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    .font-editorial { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .font-sans-clean { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
+    .font-bold-display { font-family: 'Outfit', -apple-system, sans-serif; }
+    
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      font-weight: 500;
+    }
+
+    .book-realistic {
+      box-shadow: 
+        -10px 14px 28px rgba(15, 23, 42, 0.25),
+        -2px 4px 10px rgba(15, 23, 42, 0.15),
+        inset 3px 0 6px rgba(255, 255, 255, 0.3);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+    }
+    .book-realistic:hover {
+      transform: translateY(-6px) rotate(-1deg);
+      box-shadow: 
+        -14px 20px 36px rgba(15, 23, 42, 0.32),
+        -4px 6px 14px rgba(15, 23, 42, 0.18);
+    }
+
+    .book-spine-line {
+      background: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(255,255,255,0.25) 40%, rgba(0,0,0,0.15) 100%);
+    }
+
+    .touch-target {
+      min-height: 48px;
+    }
+  </style>
+</head>
+<body id="body-root" class="bg-[#FBF9F5] text-[#0A0F1D] font-sans-clean min-h-screen antialiased selection:bg-amber-300 pb-20 sm:pb-0">
+
+  <!-- ========================================================================= -->
+  <!-- TOP CONTROLLER BAR -->
+  <!-- ========================================================================= -->
+  <div class="sticky top-0 z-50 bg-[#0A0F1D] text-white px-3 sm:px-6 py-2.5 border-b border-slate-800 shadow-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+      
+      <div class="flex items-center gap-2">
+        <span class="w-7 h-7 rounded-lg bg-amber-500 text-slate-950 font-black text-xs flex items-center justify-center shadow">JA</span>
+        <span class="font-extrabold text-xs sm:text-sm tracking-tight text-white truncate">
+          Joshua Adeoluwa <span class="hidden md:inline text-slate-400 font-semibold">| Rich Book Details & Chapters Preview</span>
+        </span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <div class="flex bg-slate-800 p-0.5 rounded-lg border border-slate-700 text-xs font-bold">
+          <button id="btn-tab-public" onclick="switchView('public')" class="px-2.5 sm:px-3 py-1 rounded-md bg-amber-500 text-slate-950 shadow">
+            Public Site
+          </button>
+          <button id="btn-tab-admin" onclick="switchView('admin')" class="px-2.5 sm:px-3 py-1 rounded-md text-slate-300 hover:text-white transition">
+            Admin Studio
+          </button>
+        </div>
+
+        <select id="theme-select" onchange="switchTheme(this.value)" class="bg-slate-800 border border-slate-700 text-slate-100 font-semibold text-xs rounded-lg px-2 py-1 focus:ring-1 focus:ring-amber-500 focus:outline-none">
+          <option value="warm-editorial">Warm Editorial (Ivory & Gold)</option>
+          <option value="clean-modern">Clean Modern (High-Contrast White)</option>
+          <option value="dark-luxe">Dark Luxe (Obsidian & Glass)</option>
+        </select>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- PUBLIC SHOWCASE & CAMPAIGN -->
+  <!-- ========================================================================= -->
+  <main id="public-view" class="block">
+    
+    <!-- NAVIGATION BAR -->
+    <nav id="main-nav" class="sticky top-[47px] z-40 bg-[#FBF9F5]/95 backdrop-blur-md border-b border-stone-300 transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+        
+        <!-- Logo -->
+        <a href="#featured" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-full bg-slate-950 text-amber-400 flex items-center justify-center font-black text-xl border-2 border-amber-500 shadow-sm group-hover:scale-105 transition">
+            J
+          </div>
+          <div>
+            <h1 class="font-editorial text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950 leading-none">
+              Joshua Adeoluwa
+            </h1>
+            <p class="text-[11px] uppercase tracking-widest text-amber-800 font-extrabold mt-1">
+              Author & Strategic Thinker
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-8 text-sm font-bold text-slate-800">
+          <a href="#featured" class="hover:text-amber-700 transition">Featured Release</a>
+          <a href="#catalog" class="hover:text-amber-700 transition">Book Library</a>
+          <a href="#about" class="hover:text-amber-700 transition">About Joshua</a>
+          <a href="#newsletter" class="hover:text-amber-700 transition">VIP Reader Club</a>
+        </div>
+
+        <!-- Desktop Action Buttons -->
+        <div class="hidden md:flex items-center gap-3">
+          <button onclick="switchView('admin')" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl border-2 border-slate-300 text-xs font-bold text-slate-800 hover:border-slate-900 hover:bg-white transition">
+            <svg class="w-4 h-4 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            Author Portal
+          </button>
+          <a href="#catalog" class="px-5 py-2.5 rounded-xl bg-slate-950 hover:bg-slate-800 text-white text-xs sm:text-sm font-extrabold shadow-md transition">
+            Explore All Books
+          </a>
+        </div>
+
+        <!-- MOBILE HAMBURGER BUTTON -->
+        <div class="flex items-center gap-2 md:hidden">
+          <a href="#catalog" class="px-3 py-2 rounded-xl bg-amber-600 text-white font-extrabold text-xs shadow-sm">
+            Books
+          </a>
+          <button onclick="toggleMobileMenu()" id="hamburger-btn" class="touch-target w-11 h-11 rounded-xl bg-white border-2 border-stone-300 text-slate-900 flex items-center justify-center shadow-sm active:scale-95 transition" aria-label="Open Navigation Menu">
+            <svg id="hamburger-icon" class="w-6 h-6 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="close-icon" class="w-6 h-6 stroke-[2.5] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- MOBILE HAMBURGER MENU DRAWER -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-b-2 border-stone-300 px-6 py-6 space-y-4 shadow-xl animate-in slide-in-from-top-2 duration-200">
+        <div class="space-y-3 font-extrabold text-base text-slate-900">
+          <a href="#featured" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-amber-50 hover:text-amber-800 transition">
+            📖 Featured Release
+          </a>
+          <a href="#catalog" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-amber-50 hover:text-amber-800 transition">
+            📚 Complete Books Library
+          </a>
+          <a href="#about" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-amber-50 hover:text-amber-800 transition">
+            ✍️ About Joshua Adeoluwa
+          </a>
+          <a href="#newsletter" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-amber-50 hover:text-amber-800 transition">
+            📬 VIP Reader Circle
+          </a>
+        </div>
+
+        <div class="pt-4 border-t border-stone-200 space-y-2">
+          <button onclick="toggleMobileMenu(); switchView('admin')" class="touch-target w-full py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-900 font-extrabold text-sm flex items-center justify-center gap-2 border border-stone-300">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            Author Admin Dashboard
+          </button>
+          <a href="#catalog" onclick="toggleMobileMenu()" class="touch-target w-full py-3 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow">
+            Browse All Books Now
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="featured" class="relative overflow-hidden py-10 sm:py-20 border-b border-stone-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <!-- Book Cover on Mobile (Shows first) -->
+          <div class="order-1 lg:order-2 lg:col-span-5 flex justify-center py-4">
+            <div class="relative group cursor-pointer" onclick="openBookModal(0)">
+              <div id="hero-halo" class="absolute -inset-4 bg-amber-500/25 rounded-full blur-2xl group-hover:bg-amber-500/35 transition duration-500"></div>
+              
+              <div class="relative book-realistic w-60 sm:w-72 md:w-80 h-84 sm:h-[440px] rounded-r-2xl overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-amber-950 text-white p-6 sm:p-8 flex flex-col justify-between border-y border-r border-slate-700/60">
+                <div class="book-spine-line absolute left-0 top-0 bottom-0 w-3.5"></div>
+
+                <div class="space-y-2">
+                  <span class="inline-block px-3 py-1 rounded text-[11px] font-black uppercase tracking-widest bg-amber-400 text-slate-950 shadow">
+                    Flagship Masterwork
+                  </span>
+                  <h3 class="font-editorial text-3xl sm:text-4xl font-black leading-tight pt-2 text-white">
+                    The Architecture of Purpose
+                  </h3>
+                  <p class="text-xs sm:text-sm text-amber-200 font-bold tracking-wide">
+                    Mastering Life, Vision & Generational Legacy
+                  </p>
+                </div>
+
+                <div class="my-auto flex justify-center py-3">
+                  <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-amber-400/40 flex items-center justify-center p-2">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-dashed border-amber-300/80 flex items-center justify-center text-amber-400 font-editorial text-2xl font-black">
+                      JA
+                    </div>
+                  </div>
+                </div>
+
+                <div class="border-t border-white/20 pt-3 flex items-center justify-between">
+                  <div>
+                    <span class="text-[10px] uppercase tracking-widest text-slate-300 font-bold block">Author</span>
+                    <span class="font-editorial text-lg sm:text-xl font-black text-amber-100">Joshua Adeoluwa</span>
+                  </div>
+                  <span class="text-xs font-extrabold text-amber-300 bg-amber-500/30 px-2.5 py-1 rounded">
+                    Hardcover & E-Book
+                  </span>
+                </div>
+              </div>
+
+              <p class="text-center text-xs text-slate-600 font-black mt-3 flex items-center justify-center gap-1">
+                <span>📖 Tap cover for in-depth breakdown & chapters</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Hero Copy -->
+          <div class="order-2 lg:order-1 lg:col-span-7 space-y-6">
+            
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 border border-amber-600/40 text-amber-950 text-xs font-black uppercase tracking-wider">
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-600 animate-ping"></span>
+              #1 Bestseller & Official Campaign
+            </div>
+
+            <h2 id="hero-headline" class="font-editorial text-3xl sm:text-5xl lg:text-6xl font-black text-slate-950 leading-[1.12]">
+              Stop wandering through life. <br class="hidden sm:inline">
+              <span class="text-amber-800 underline decoration-amber-400/60 decoration-4">Build what outlasts you.</span>
+            </h2>
+
+            <p class="text-base sm:text-lg text-slate-800 leading-relaxed font-semibold">
+              In this definitive work, <strong>Joshua Adeoluwa</strong> reveals the core mental frameworks, disciplined habits, and spiritual clarity required to break free from mediocrity, operate in your divine calling, and leave a generational footprint.
+            </p>
+
+            <!-- Quick Hook Bullets directly in Hero (Builds Intense Buyer Interest) -->
+            <div class="bg-amber-50/80 border-2 border-amber-200/80 rounded-2xl p-4 space-y-2 text-xs sm:text-sm font-bold text-slate-900">
+              <p class="text-[11px] font-black uppercase tracking-wider text-amber-800">What Readers Experience Inside:</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-700 font-black text-base">✓</span>
+                  <span>Silence noise & discover your true life mandate</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-700 font-black text-base">✓</span>
+                  <span>Defeat burnout with rhythmic sovereign discipline</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-700 font-black text-base">✓</span>
+                  <span>Master divine timing & strategic decision-making</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-700 font-black text-base">✓</span>
+                  <span>Construct projects that outlive your generation</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social proof -->
+            <div class="flex flex-wrap items-center gap-3 pt-1 text-slate-900 text-xs sm:text-sm font-bold">
+              <div class="flex text-amber-500 text-base">★★★★★</div>
+              <span class="font-black text-slate-950">5.0 / 5.0 (480+ Verified Reviews)</span>
+              <span class="text-slate-300">•</span>
+              <span class="text-slate-700 font-extrabold">Over 14,000+ readers worldwide</span>
+            </div>
+
+            <!-- Price & CTA Card -->
+            <div class="bg-white p-5 rounded-2xl border-2 border-stone-300 shadow-md space-y-4">
+              <div class="flex items-baseline justify-between">
+                <div>
+                  <span class="text-xs text-slate-500 block font-bold uppercase tracking-wider">Special Campaign Price</span>
+                  <div class="flex items-baseline gap-2 mt-0.5">
+                    <span class="text-3xl sm:text-4xl font-black text-slate-950">$19.99</span>
+                    <span class="text-base text-slate-400 line-through font-bold">$29.99</span>
+                    <span class="text-xs font-black text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-full border border-emerald-300">SAVE 33%</span>
+                  </div>
+                </div>
+                <span class="text-xs text-slate-600 font-bold hidden sm:block">⚡ Instant Global Delivery</span>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                <button onclick="openBuyModal('The Architecture of Purpose', '$19.99', 'https://amazon.com', 'Paperback, Hardcover, Kindle')" class="touch-target px-6 py-4 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-black text-base shadow-lg transition flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                  <span>Buy Now — $19.99</span>
+                </button>
+                <button onclick="openBookModal(0)" class="touch-target px-5 py-4 rounded-xl border-2 border-slate-950 text-slate-950 font-black text-sm hover:bg-slate-950 hover:text-white transition flex items-center justify-center gap-2">
+                  <svg class="w-4 h-4 text-current" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                  <span>See Full Book Details</span>
+                </button>
+              </div>
+
+              <!-- Retailers -->
+              <div class="pt-2 flex flex-wrap items-center gap-2 text-xs text-slate-700 font-bold">
+                <span>Available at:</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 font-extrabold text-slate-900 border border-slate-200">Amazon</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 font-extrabold text-slate-900 border border-slate-200">Selar</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 font-extrabold text-slate-900 border border-slate-200">Paystack</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 font-extrabold text-slate-900 border border-slate-200">Gumroad</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKS CATALOG -->
+    <section id="catalog" class="py-14 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b-2 border-stone-300">
+        <div>
+          <span class="text-xs font-black uppercase tracking-widest text-amber-800">Published Works</span>
+          <h2 class="font-editorial text-3xl sm:text-5xl font-black text-slate-950 mt-1">
+            Complete Books Library
+          </h2>
+          <p class="text-slate-700 text-sm sm:text-base font-bold mt-2 max-w-xl">
+            Click any book to read what's inside, sample excerpts, reader feedback, and order directly.
+          </p>
+        </div>
+
+        <div class="w-full md:w-80">
+          <div class="relative">
+            <input type="text" id="catalog-search" oninput="searchBooks(this.value)" placeholder="Search books by title..." class="w-full pl-10 pr-4 py-3 rounded-xl bg-white border-2 border-stone-300 text-sm text-slate-950 font-bold placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+            <svg class="w-5 h-5 text-slate-500 absolute left-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex items-center gap-2 overflow-x-auto py-4 no-scrollbar">
+        <button onclick="filterCategory('all', this)" class="cat-pill whitespace-nowrap px-5 py-2.5 rounded-full text-xs font-black bg-slate-950 text-white shadow-sm transition">
+          All Books (4)
+        </button>
+        <button onclick="filterCategory('mindset', this)" class="cat-pill whitespace-nowrap px-5 py-2.5 rounded-full text-xs font-extrabold bg-white text-slate-800 border-2 border-stone-300 hover:bg-stone-100 transition">
+          Mindset & Habits
+        </button>
+        <button onclick="filterCategory('leadership', this)" class="cat-pill whitespace-nowrap px-5 py-2.5 rounded-full text-xs font-extrabold bg-white text-slate-800 border-2 border-stone-300 hover:bg-stone-100 transition">
+          Leadership & Vision
+        </button>
+        <button onclick="filterCategory('faith', this)" class="cat-pill whitespace-nowrap px-5 py-2.5 rounded-full text-xs font-extrabold bg-white text-slate-800 border-2 border-stone-300 hover:bg-stone-100 transition">
+          Faith & Sovereignty
+        </button>
+      </div>
+
+      <!-- Books Cards Grid with Hook Bullets -->
+      <div id="books-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 pt-6">
+        
+        <!-- Book Card 0 -->
+        <div class="book-item bg-white rounded-2xl border-2 border-stone-300 p-5 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="faith" data-title="The Architecture of Purpose">
+          <div>
+            <div onclick="openBookModal(0)" class="cursor-pointer relative w-full h-64 sm:h-72 rounded-xl bg-gradient-to-tr from-slate-950 via-slate-900 to-amber-950 flex items-center justify-center p-6 text-white text-center overflow-hidden mb-5 shadow group">
+              <div class="relative z-10 space-y-1.5">
+                <span class="text-[10px] font-black uppercase tracking-widest text-amber-300 bg-amber-400/30 px-3 py-1 rounded-full">Flagship Masterwork</span>
+                <h4 class="font-editorial text-2xl sm:text-3xl font-black leading-tight text-white">The Architecture of Purpose</h4>
+                <p class="text-xs text-amber-200 font-bold">Principles of Exceptional Living</p>
+                <p class="text-xs font-extrabold text-slate-300 pt-3">Joshua Adeoluwa</p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs mb-2">
+              <span class="font-black text-amber-900 bg-amber-100 px-2.5 py-0.5 rounded">Featured Masterpiece</span>
+              <span class="font-bold text-slate-800">★★★★★ (5.0)</span>
+            </div>
+
+            <h3 class="font-editorial text-2xl sm:text-3xl font-black text-slate-950 leading-snug">
+              The Architecture of Purpose
+            </h3>
+            <p class="text-slate-700 text-xs sm:text-sm mt-2 leading-relaxed font-semibold">
+              A comprehensive blueprint for discovering divine timing, silencing distractions, and engineering a life of profound substance.
+            </p>
+
+            <!-- Hook Bullets on Card (Attracts buyers instantly) -->
+            <div class="mt-4 pt-3 border-t border-stone-200 space-y-1.5 text-xs text-slate-800 font-bold">
+              <div class="flex items-center gap-1.5 text-emerald-800">
+                <span>✓</span>
+                <span class="text-slate-900">How to define your authentic life assignment</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-emerald-800">
+                <span>✓</span>
+                <span class="text-slate-900">Overcoming societal pressure & comparison</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-emerald-800">
+                <span>✓</span>
+                <span class="text-slate-900">Includes 12 practical action worksheets</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-5 border-t-2 border-stone-200 mt-5 flex items-center justify-between gap-2">
+            <div>
+              <span class="text-[11px] text-slate-500 block font-bold">Digital & Print</span>
+              <span class="text-2xl font-black text-slate-950">$19.99</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="openBookModal(0)" class="touch-target px-4 py-2 rounded-xl border-2 border-stone-300 hover:bg-stone-100 text-slate-900 text-xs font-black">
+                Details
+              </button>
+              <button onclick="openBuyModal('The Architecture of Purpose', '$19.99', 'https://amazon.com', 'Paperback, Hardcover, Kindle')" class="touch-target px-5 py-2 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-black transition flex items-center gap-1 shadow">
+                <span>Buy</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book Card 1 -->
+        <div class="book-item bg-white rounded-2xl border-2 border-stone-300 p-5 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="mindset" data-title="Unshakable Focus">
+          <div>
+            <div onclick="openBookModal(1)" class="cursor-pointer relative w-full h-64 sm:h-72 rounded-xl bg-gradient-to-tr from-slate-950 via-slate-800 to-indigo-950 flex items-center justify-center p-6 text-white text-center overflow-hidden mb-5 shadow group">
+              <div class="relative z-10 space-y-1.5">
+                <span class="text-[10px] font-black uppercase tracking-widest text-indigo-300 bg-indigo-400/30 px-3 py-1 rounded-full">Mindset & Habits</span>
+                <h4 class="font-editorial text-2xl sm:text-3xl font-black leading-tight text-white">Unshakable Focus</h4>
+                <p class="text-xs text-indigo-200 font-bold">Winning the War for Your Attention</p>
+                <p class="text-xs font-extrabold text-slate-300 pt-3">Joshua Adeoluwa</p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs mb-2">
+              <span class="font-black text-indigo-900 bg-indigo-100 px-2.5 py-0.5 rounded">Bestseller</span>
+              <span class="font-bold text-slate-800">★★★★★ (4.9)</span>
+            </div>
+
+            <h3 class="font-editorial text-2xl sm:text-3xl font-black text-slate-950 leading-snug">
+              Unshakable Focus
+            </h3>
+            <p class="text-slate-700 text-xs sm:text-sm mt-2 leading-relaxed font-semibold">
+              A deep, tactical guide to defeating digital distractions, building razor-sharp discipline, and reclaiming deep work.
+            </p>
+
+            <div class="mt-4 pt-3 border-t border-stone-200 space-y-1.5 text-xs text-slate-800 font-bold">
+              <div class="flex items-center gap-1.5 text-indigo-800">
+                <span>✓</span>
+                <span class="text-slate-900">How to do 4 hours of deep work in 90 minutes</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-indigo-800">
+                <span>✓</span>
+                <span class="text-slate-900">The dopamine detox protocol that actually works</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-indigo-800">
+                <span>✓</span>
+                <span class="text-slate-900">Protecting your mental bandwidth daily</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-5 border-t-2 border-stone-200 mt-5 flex items-center justify-between gap-2">
+            <div>
+              <span class="text-[11px] text-slate-500 block font-bold">E-Book & Print</span>
+              <span class="text-2xl font-black text-slate-950">$14.99</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="openBookModal(1)" class="touch-target px-4 py-2 rounded-xl border-2 border-stone-300 hover:bg-stone-100 text-slate-900 text-xs font-black">
+                Details
+              </button>
+              <button onclick="openBuyModal('Unshakable Focus', '$14.99', 'https://amazon.com', 'Kindle, PDF, Paperback')" class="touch-target px-5 py-2 rounded-xl bg-slate-950 hover:bg-amber-600 text-white text-xs font-black transition flex items-center gap-1 shadow">
+                <span>Buy</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book Card 2 -->
+        <div class="book-item bg-white rounded-2xl border-2 border-stone-300 p-5 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="leadership" data-title="The Leader's Crucible">
+          <div>
+            <div onclick="openBookModal(2)" class="cursor-pointer relative w-full h-64 sm:h-72 rounded-xl bg-gradient-to-tr from-emerald-950 via-slate-900 to-emerald-900 flex items-center justify-center p-6 text-white text-center overflow-hidden mb-5 shadow group">
+              <div class="relative z-10 space-y-1.5">
+                <span class="text-[10px] font-black uppercase tracking-widest text-emerald-300 bg-emerald-400/30 px-3 py-1 rounded-full">Leadership & Vision</span>
+                <h4 class="font-editorial text-2xl sm:text-3xl font-black leading-tight text-white">The Leader's Crucible</h4>
+                <p class="text-xs text-emerald-200 font-bold">How Enduring Leaders are Forged</p>
+                <p class="text-xs font-extrabold text-slate-300 pt-3">Joshua Adeoluwa</p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs mb-2">
+              <span class="font-black text-emerald-900 bg-emerald-100 px-2.5 py-0.5 rounded">New Edition</span>
+              <span class="font-bold text-slate-800">★★★★★ (5.0)</span>
+            </div>
+
+            <h3 class="font-editorial text-2xl sm:text-3xl font-black text-slate-950 leading-snug">
+              The Leader's Crucible
+            </h3>
+            <p class="text-slate-700 text-xs sm:text-sm mt-2 leading-relaxed font-semibold">
+              Timeless strategies on organizational clarity, managing high-stakes crisis pressure, and inspiring teams.
+            </p>
+
+            <div class="mt-4 pt-3 border-t border-stone-200 space-y-1.5 text-xs text-slate-800 font-bold">
+              <div class="flex items-center gap-1.5 text-emerald-800">
+                <span>✓</span>
+                <span class="text-slate-900">Leading through uncertainty with silent strength</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-emerald-800">
+                <span>✓</span>
+                <span class="text-slate-900">How to handle betrayal & public opposition</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-emerald-800">
+                <span>✓</span>
+                <span class="text-slate-900">Building teams that run without micromanagement</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-5 border-t-2 border-stone-200 mt-5 flex items-center justify-between gap-2">
+            <div>
+              <span class="text-[11px] text-slate-500 block font-bold">Hardcover Edition</span>
+              <span class="text-2xl font-black text-slate-950">$21.50</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="openBookModal(2)" class="touch-target px-4 py-2 rounded-xl border-2 border-stone-300 hover:bg-stone-100 text-slate-900 text-xs font-black">
+                Details
+              </button>
+              <button onclick="openBuyModal('The Leader\'s Crucible', '$21.50', 'https://selar.co', 'Hardcover, E-Book')" class="touch-target px-5 py-2 rounded-xl bg-slate-950 hover:bg-emerald-700 text-white text-xs font-black transition flex items-center gap-1 shadow">
+                <span>Buy</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT THE AUTHOR SECTION -->
+    <section id="about" class="py-16 sm:py-24 bg-stone-200/50 border-t-2 border-b-2 border-stone-300">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
+          
+          <div class="md:col-span-4 flex justify-center">
+            <div class="relative">
+              <div class="w-48 h-48 sm:w-60 sm:h-60 rounded-3xl bg-gradient-to-br from-slate-950 to-amber-950 p-3 shadow-2xl border-4 border-white flex items-center justify-center text-center">
+                <div class="space-y-1">
+                  <div class="w-16 h-16 rounded-full bg-amber-500/30 text-amber-400 mx-auto flex items-center justify-center font-editorial text-3xl font-black border-2 border-amber-400/50">
+                    JA
+                  </div>
+                  <p class="font-editorial text-2xl font-black text-white pt-2">Joshua Adeoluwa</p>
+                  <p class="text-[11px] uppercase tracking-widest text-amber-300 font-extrabold">Author Photo Slot</p>
+                </div>
+              </div>
+              <div class="absolute -bottom-3 -right-2 bg-slate-950 text-amber-400 px-3.5 py-1.5 rounded-full text-xs font-black shadow-lg border border-amber-500/40">
+                ✍️ Published Author
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-8 space-y-4">
+            <span class="text-xs font-black uppercase tracking-widest text-amber-800">The Author</span>
+            <h2 class="font-editorial text-3xl sm:text-5xl font-black text-slate-950">
+              About Joshua Adeoluwa
+            </h2>
+            <p class="text-slate-800 text-base sm:text-lg leading-relaxed font-bold">
+              <strong>Joshua Adeoluwa</strong> is a visionary author, strategist, and teacher dedicated to equipping thinkers, leaders, and entrepreneurs to operate with clarity, unyielding discipline, and spiritual grounding.
+            </p>
+            <p class="text-slate-700 text-sm sm:text-base leading-relaxed font-semibold">
+              Through his books and teachings, Joshua breaks down complex principles of personal development, leadership, and purpose into practical, actionable frameworks that help readers construct lives of enduring influence.
+            </p>
+            
+            <div class="pt-2 flex flex-wrap items-center gap-4 text-xs sm:text-sm font-black text-slate-900">
+              <span class="text-slate-500">Connect with Joshua:</span>
+              <a href="#" class="hover:text-amber-800 underline">Twitter / X</a>
+              <a href="#" class="hover:text-amber-800 underline">LinkedIn</a>
+              <a href="#" class="hover:text-amber-800 underline">Instagram</a>
+              <a href="#" class="hover:text-amber-800 underline">Direct Contact</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- VIP READERS NEWSLETTER -->
+    <section id="newsletter" class="py-14 sm:py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="bg-slate-950 rounded-3xl p-6 sm:p-12 text-white shadow-2xl space-y-5 border-2 border-slate-800">
+        <span class="text-xs font-black uppercase tracking-widest text-amber-400">Join the Inner Circle</span>
+        <h2 class="font-editorial text-3xl sm:text-5xl font-black">
+          Joshua Adeoluwa's Readers List
+        </h2>
+        <p class="text-slate-200 text-sm sm:text-base max-w-lg mx-auto leading-relaxed font-bold">
+          Be the first to receive new book releases, unpublished essays, private audio reflections, and early-bird reader discounts.
+        </p>
+        
+        <div class="max-w-md mx-auto flex flex-col sm:flex-row gap-2 pt-2">
+          <input type="email" placeholder="Enter your email address..." class="touch-target px-4 py-3 rounded-xl bg-slate-900 border-2 border-slate-700 text-white font-bold text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 flex-1">
+          <button class="touch-target px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-sm transition shadow-md">
+            Subscribe Free
+          </button>
+        </div>
+        <p class="text-xs text-slate-400 font-bold">No spam. Only thoughtful letters and private book announcements.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t-2 border-stone-300 py-10 bg-white text-center text-xs text-slate-600 font-bold">
+      <div class="max-w-7xl mx-auto px-4 space-y-3">
+        <p class="font-editorial text-2xl text-slate-950 font-black">Joshua Adeoluwa</p>
+        <p>© 2026 Joshua Adeoluwa. All rights reserved. Powered by Next.js & Neon PostgreSQL on Vercel.</p>
+        <div class="pt-1">
+          <button onclick="switchView('admin')" class="text-slate-700 hover:text-slate-950 text-xs underline font-black">
+            Author Admin Dashboard Login
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- STICKY MOBILE BOTTOM PURCHASE BAR -->
+    <div class="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-950/95 backdrop-blur-md border-t-2 border-slate-800 p-3 px-4 flex items-center justify-between shadow-2xl">
+      <div class="truncate mr-3">
+        <span class="text-[10px] text-amber-400 font-black block uppercase tracking-wider">Top Book</span>
+        <span class="text-xs font-black text-white truncate block">The Architecture of Purpose</span>
+      </div>
+      <button onclick="openBuyModal('The Architecture of Purpose', '$19.99', 'https://amazon.com', 'Paperback, Hardcover, Kindle')" class="touch-target px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs whitespace-nowrap shadow">
+        Buy $19.99
+      </button>
+    </div>
+
+  </main>
+
+
+  <!-- ========================================================================= -->
+  <!-- ADMIN STUDIO -->
+  <!-- ========================================================================= -->
+  <section id="admin-view" class="hidden min-h-screen bg-slate-950 text-slate-100 font-sans-clean pb-12">
+    
+    <div class="border-b border-slate-800 bg-slate-900/80 backdrop-blur px-4 sm:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="w-8 h-8 rounded-lg bg-amber-500 text-slate-950 font-black flex items-center justify-center text-sm">JA</span>
+        <div>
+          <h2 class="font-extrabold text-white text-sm">Joshua Adeoluwa — Author Studio</h2>
+          <p class="text-xs text-slate-400 font-semibold">Post new books & update purchase links</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <button onclick="switchView('public')" class="touch-target px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-black text-slate-200 transition flex items-center gap-1.5 border border-slate-700">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          <span>View Public Site</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto p-4 sm:p-8 space-y-8">
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+        <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl">
+          <span class="text-xs text-slate-400 block font-bold">Published Books</span>
+          <span class="text-2xl font-black text-white">4</span>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl">
+          <span class="text-xs text-slate-400 block font-bold">Hero Spotlight</span>
+          <span class="text-xs font-black text-amber-400 block mt-2 truncate">Architecture of Purpose</span>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl">
+          <span class="text-xs text-slate-400 block font-bold">Database</span>
+          <span class="text-xs font-black text-emerald-400 block mt-2">● Neon PostgreSQL</span>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl">
+          <span class="text-xs text-slate-400 block font-bold">Hosting</span>
+          <span class="text-xs font-black text-cyan-400 block mt-2">▲ Vercel Edge</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Form -->
+        <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-3xl p-5 sm:p-7 shadow-xl space-y-4">
+          <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+            <div>
+              <h3 class="font-black text-white text-base">Add or Update a Book</h3>
+              <p class="text-xs text-slate-400 font-bold">Fill in fields below; card syncs live on the right.</p>
+            </div>
+            <span class="text-xs font-black text-amber-400 bg-amber-400/20 px-2.5 py-1 rounded">Sync Active</span>
+          </div>
+
+          <div class="space-y-4 text-xs sm:text-sm font-bold">
+            <div>
+              <label class="block text-slate-300 mb-1">Book Title *</label>
+              <input type="text" id="form-title" oninput="syncAdminCard()" value="The Art of Sovereign Living" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white font-bold focus:outline-none focus:ring-2 focus:ring-amber-500">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-slate-300 mb-1">Genre / Category</label>
+                <select id="form-category" onchange="syncAdminCard()" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white font-bold focus:outline-none focus:ring-2 focus:ring-amber-500">
+                  <option value="Mindset & Habits">Mindset & Habits</option>
+                  <option value="Leadership & Vision">Leadership & Vision</option>
+                  <option value="Faith & Purpose">Faith & Purpose</option>
+                  <option value="Wealth & Strategy">Wealth & Strategy</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-slate-300 mb-1">Price Tag *</label>
+                <input type="text" id="form-price" oninput="syncAdminCard()" value="$18.50" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white font-bold focus:outline-none focus:ring-2 focus:ring-amber-500">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-slate-300 mb-1">Purchase / Checkout Link (Amazon, Selar, Paystack, Gumroad) *</label>
+              <input type="url" id="form-link" value="https://selar.co/your-book-link" placeholder="https://selar.co/..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white font-bold focus:outline-none focus:ring-2 focus:ring-amber-500">
+            </div>
+
+            <div>
+              <label class="block text-slate-300 mb-1">Book Synopsis / Description</label>
+              <textarea id="form-desc" oninput="syncAdminCard()" rows="3" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white font-bold focus:outline-none focus:ring-2 focus:ring-amber-500">A profound study into identifying your authentic divine assignment, mastering deep quiet, and navigating chaos with composure.</textarea>
+            </div>
+
+            <div class="flex items-center gap-2 pt-1">
+              <input type="checkbox" id="form-featured" class="w-4 h-4 rounded text-amber-500 focus:ring-amber-500 bg-slate-800 border-slate-700">
+              <label for="form-featured" class="text-slate-300 text-xs font-bold">
+                Pin as "Featured / Hero Spotlight" on homepage
+              </label>
+            </div>
+
+            <div class="pt-3 flex flex-wrap items-center gap-3">
+              <button onclick="alert('In the Next.js app, this posts directly to your Neon PostgreSQL database!')" class="touch-target px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-sm shadow-md transition flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+                Publish Book
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Sync Card -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-slate-400 uppercase tracking-wider">Live Reader Preview</span>
+            <span class="text-[11px] text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-2 py-0.5 rounded font-black">Sync Live</span>
+          </div>
+
+          <div class="bg-slate-900 border border-slate-800 p-5 rounded-3xl">
+            <div class="w-full h-60 rounded-2xl bg-gradient-to-tr from-amber-950 via-slate-900 to-slate-950 flex items-center justify-center p-6 text-white text-center shadow mb-4">
+              <div class="space-y-1">
+                <span id="card-preview-tag" class="text-[10px] font-black uppercase tracking-widest text-amber-400 bg-amber-400/20 px-2.5 py-0.5 rounded-full">Mindset & Habits</span>
+                <h4 id="card-preview-title" class="font-editorial text-2xl font-black leading-tight text-white">The Art of Sovereign Living</h4>
+                <p class="text-xs text-amber-200 font-bold">Joshua Adeoluwa</p>
+              </div>
+            </div>
+
+            <h3 id="card-preview-heading" class="font-editorial text-2xl font-black text-white">
+              The Art of Sovereign Living
+            </h3>
+            <p id="card-preview-desc" class="text-slate-300 text-xs mt-2 line-clamp-3 leading-relaxed font-bold">
+              A profound study into identifying your authentic divine assignment, mastering deep quiet, and navigating chaos with composure.
+            </p>
+
+            <div class="pt-4 border-t border-slate-800 mt-4 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] text-slate-500 block font-bold">Reader Price</span>
+                <span id="card-preview-price" class="text-xl font-black text-amber-400">$18.50</span>
+              </div>
+              <span class="px-5 py-2.5 rounded-xl bg-amber-500 text-slate-950 text-xs font-black shadow">
+                Buy Book
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: EXPANDED COMPREHENSIVE BOOK DETAILS (Hook, Specs, Bullets, Reviews) -->
+  <!-- ========================================================================= -->
+  <div id="book-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="bg-white text-slate-900 rounded-t-3xl sm:rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative space-y-6 max-h-[92vh] overflow-y-auto animate-in fade-in slide-in-from-bottom sm:zoom-in-95 duration-200 border-2 border-stone-200">
+      
+      <!-- Close Button -->
+      <button onclick="closeModal('book-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-950 text-3xl font-black touch-target z-10">✕</button>
+
+      <!-- 1. Header: Category, Title, Subtitle, Price -->
+      <div class="space-y-1.5 border-b-2 border-stone-200 pb-4">
+        <div class="flex flex-wrap items-center gap-2">
+          <span id="modal-genre" class="text-xs font-black uppercase tracking-wider text-amber-900 bg-amber-100 px-3 py-1 rounded-full">Category</span>
+          <span class="text-xs font-extrabold text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-full">Verified Bestseller</span>
+          <span class="text-xs text-amber-500 font-black">★★★★★ 5.0 Rating</span>
+        </div>
+        <h3 id="modal-title" class="font-editorial text-3xl sm:text-4xl font-black text-slate-950 pt-1 leading-tight">The Architecture of Purpose</h3>
+        <p id="modal-tagline" class="text-sm font-bold text-amber-800">Mastering Life, Vision & Generational Legacy</p>
+        <div class="flex items-baseline gap-2 pt-1">
+          <span id="modal-price" class="text-3xl font-black text-slate-950">$19.99</span>
+          <span class="text-xs font-black text-slate-400 uppercase">Print & Digital Instant Access</span>
+        </div>
+      </div>
+
+      <!-- 2. "About This Book" Hook Summary -->
+      <div class="space-y-2">
+        <h4 class="text-xs font-black uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+          <span>📖</span> The Big Promise & Synopsis
+        </h4>
+        <p id="modal-desc" class="text-sm sm:text-base text-slate-800 leading-relaxed font-bold">
+          Book synopsis will appear here.
+        </p>
+      </div>
+
+      <!-- 3. What You Will Discover (Core Pillars / Key Takeaways) -->
+      <div class="bg-amber-50/90 rounded-2xl p-5 border-2 border-amber-200/80 space-y-3">
+        <h4 class="text-xs font-black uppercase tracking-wider text-amber-900 flex items-center gap-1.5">
+          <span>🎯</span> Key Takeaways: What You Will Master
+        </h4>
+        <div id="modal-takeaways" class="space-y-2 text-xs sm:text-sm text-slate-900 font-bold">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- 4. Who Needs This Book -->
+      <div class="space-y-2">
+        <h4 class="text-xs font-black uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+          <span>👥</span> Who This Book Was Written For:
+        </h4>
+        <div id="modal-audience" class="flex flex-wrap gap-2 text-xs font-extrabold">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- 5. Sample Chapter Excerpt -->
+      <div class="bg-stone-100 p-5 rounded-2xl border-2 border-stone-300 text-xs sm:text-sm leading-relaxed space-y-2 italic font-serif text-slate-900">
+        <span class="text-[11px] font-black uppercase tracking-wider text-amber-900 not-italic block">Sample Chapter Excerpt:</span>
+        <p id="modal-excerpt" class="font-bold">
+          "A life without intentional architecture collapses under the weight of accidental decisions. When you understand your assignment, hurry ends, and true dominion begins."
+        </p>
+      </div>
+
+      <!-- 6. Book Specifications & Reader Reviews -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs font-bold">
+        <div class="p-3 bg-stone-50 rounded-xl border border-stone-200">
+          <span class="text-[10px] text-slate-500 block uppercase">Pages</span>
+          <span id="modal-pages" class="font-black text-slate-950 text-sm">264 Pages</span>
+        </div>
+        <div class="p-3 bg-stone-50 rounded-xl border border-stone-200">
+          <span class="text-[10px] text-slate-500 block uppercase">Reading Time</span>
+          <span class="font-black text-slate-950 text-sm">~4.5 Hours</span>
+        </div>
+        <div class="p-3 bg-stone-50 rounded-xl border border-stone-200">
+          <span class="text-[10px] text-slate-500 block uppercase">Format</span>
+          <span class="font-black text-slate-950 text-sm">Print + PDF</span>
+        </div>
+        <div class="p-3 bg-stone-50 rounded-xl border border-stone-200">
+          <span class="text-[10px] text-slate-500 block uppercase">Language</span>
+          <span class="font-black text-slate-950 text-sm">English</span>
+        </div>
+      </div>
+
+      <!-- 7. Order From Verified Stores (Direct Call To Action) -->
+      <div class="space-y-3 pt-2 border-t-2 border-stone-200">
+        <div class="flex items-center justify-between">
+          <h4 class="text-xs font-black text-slate-950 uppercase tracking-wider">Ready to Own Your Copy? Select Store:</h4>
+          <span class="text-xs text-emerald-700 font-extrabold">Instant Redirect</span>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+          <a id="modal-link-amazon" href="https://amazon.com" target="_blank" class="touch-target flex items-center justify-center gap-2 p-3.5 rounded-xl border-2 border-stone-300 hover:border-amber-600 hover:bg-amber-50 transition font-black text-xs text-slate-950 shadow-sm">
+            <span>📦 Amazon Global</span>
+          </a>
+          <a id="modal-link-selar" href="https://selar.co" target="_blank" class="touch-target flex items-center justify-center gap-2 p-3.5 rounded-xl border-2 border-stone-300 hover:border-emerald-600 hover:bg-emerald-50 transition font-black text-xs text-slate-950 shadow-sm">
+            <span>⚡ Selar / Paystack</span>
+          </a>
+          <a id="modal-link-gumroad" href="https://gumroad.com" target="_blank" class="touch-target flex items-center justify-center gap-2 p-3.5 rounded-xl border-2 border-stone-300 hover:border-indigo-600 hover:bg-indigo-50 transition font-black text-xs text-slate-950 shadow-sm">
+            <span>💻 Direct E-Book</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom Action -->
+      <div class="pt-2 flex items-center justify-between">
+        <button onclick="closeModal('book-modal')" class="text-xs font-black text-slate-500 hover:text-slate-900 underline">
+          Close Window
+        </button>
+        <button onclick="closeModal('book-modal'); openBuyModal(document.getElementById('modal-title').innerText, document.getElementById('modal-price').innerText, '#')" class="touch-target px-6 py-3 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-black text-xs shadow-md">
+          Proceed to Order
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: INSTANT BUY STORE SELECTOR -->
+  <!-- ========================================================================= -->
+  <div id="buy-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="bg-white text-slate-900 rounded-t-3xl sm:rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative space-y-4 animate-in fade-in slide-in-from-bottom sm:zoom-in-95 duration-200">
+      <button onclick="closeModal('buy-modal')" class="absolute top-5 right-5 text-slate-500 hover:text-slate-950 text-2xl font-black touch-target">✕</button>
+
+      <div class="space-y-1">
+        <span class="text-xs font-black uppercase tracking-wider text-amber-800">Choose Purchase Platform</span>
+        <h3 id="buy-book-title" class="font-editorial text-2xl sm:text-3xl font-black text-slate-950 leading-tight">The Architecture of Purpose</h3>
+        <p id="buy-book-price" class="text-2xl font-black text-slate-950 pt-0.5">$19.99</p>
+      </div>
+
+      <p class="text-xs text-slate-700 leading-normal font-bold">
+        Select your preferred checkout platform. You will be redirected securely:
+      </p>
+
+      <div class="space-y-2">
+        <a href="https://amazon.com" target="_blank" class="touch-target w-full flex items-center justify-between p-3.5 rounded-xl border-2 border-stone-300 hover:border-amber-600 hover:bg-amber-50/50 transition">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">📦</span>
+            <div>
+              <span class="font-black text-xs sm:text-sm text-slate-950 block">Amazon Global</span>
+              <span class="text-[11px] text-slate-600 font-bold">Paperback, Hardcover & Kindle</span>
+            </div>
+          </div>
+          <span class="text-xs font-black text-amber-800">Go →</span>
+        </a>
+
+        <a href="https://selar.co" target="_blank" class="touch-target w-full flex items-center justify-between p-3.5 rounded-xl border-2 border-stone-300 hover:border-emerald-600 hover:bg-emerald-50/50 transition">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">⚡</span>
+            <div>
+              <span class="font-black text-xs sm:text-sm text-slate-950 block">Selar / Paystack Store</span>
+              <span class="text-[11px] text-slate-600 font-bold">Instant Card, Bank Transfer, Apple Pay</span>
+            </div>
+          </div>
+          <span class="text-xs font-black text-emerald-800">Go →</span>
+        </a>
+
+        <a href="https://gumroad.com" target="_blank" class="touch-target w-full flex items-center justify-between p-3.5 rounded-xl border-2 border-stone-300 hover:border-indigo-600 hover:bg-indigo-50/50 transition">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">💻</span>
+            <div>
+              <span class="font-black text-xs sm:text-sm text-slate-950 block">Direct E-Book (PDF / EPUB)</span>
+              <span class="text-[11px] text-slate-600 font-bold">Instant download to phone/tablet</span>
+            </div>
+          </div>
+          <span class="text-xs font-black text-indigo-800">Go →</span>
+        </a>
+      </div>
+
+      <div class="pt-2 text-center">
+        <p class="text-[11px] text-slate-500 font-bold">🔒 100% Encrypted & Safe Checkout</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT LOGIC -->
+  <!-- ========================================================================= -->
+  <script>
+    // Rich Book Database with In-Depth Content
+    const booksData = [
+      {
+        title: "The Architecture of Purpose",
+        tagline: "Mastering Life, Vision & Generational Legacy",
+        genre: "Faith & Sovereignty",
+        price: "$19.99",
+        pages: "264 Pages",
+        desc: "In a world that screams for your attention and rewards short-term noise, this book gives you the engineering principles to build a life of lasting consequence. Joshua Adeoluwa systematically uncovers how exceptional leaders discover their authentic mandate, structure their daily habits, and turn private discipline into generational influence.",
+        takeaways: [
+          "How to identify your specific life mandate and eliminate borrowed ambitions.",
+          "The 4 Pillars of Generational Architecture: Vision, Alignment, Execution, and Legacy.",
+          "How to handle seasons of silence and obscurity before your public emergence.",
+          "A practical 30-day framework to audit your time, circle of influence, and energy."
+        ],
+        audience: [
+          "Aspiring & Seasoned Leaders",
+          "Entrepreneurs Building Enduring Companies",
+          "Believers Seeking Divine Clarity",
+          "Creative Thinkers Refusing the Status Quo"
+        ],
+        excerpt: "Most men live in the shadows of borrowed desires. They measure their pace with clocks they never built and pursue milestones they never truly questioned. When you understand what you are commissioned to build, hurry disappears and conviction takes its rightful place.",
+        link: "https://amazon.com"
+      },
+      {
+        title: "Unshakable Focus",
+        tagline: "Winning the War for Your Attention",
+        genre: "Mindset & Habits",
+        price: "$14.99",
+        pages: "218 Pages",
+        desc: "Attention is the new currency of sovereignty. Whoever controls your focus controls your destiny. This tactical book breaks down modern psychological warfare, dopamine dependency, and how high-performers construct an impenetrable fortress around their deep work.",
+        takeaways: [
+          "The Neurological Cost of Multitasking: Why fragmented attention destroys genius.",
+          "The 90-Minute Deep Work Sprint: Achieving in 1.5 hours what others do in 8.",
+          "Digital Fasting: How to reset your brain's dopamine baseline in 7 days.",
+          "Saying 'No' without guilt: Protecting your core creative and strategic hours."
+        ],
+        audience: [
+          "Knowledge Workers & Creators",
+          "Students & Researchers",
+          "Executives Juggling Demanding Schedules",
+          "Anyone Battling Procrastination & Screen Fatigue"
+        ],
+        excerpt: "Attention is not merely a cognitive resource; it is the boundary you build around what you revere. If your phone has unlimited access to your consciousness, you are not sovereign—you are occupied territory.",
+        link: "https://amazon.com"
+      },
+      {
+        title: "The Leader's Crucible",
+        tagline: "How Enduring Leaders are Forged",
+        genre: "Leadership & Vision",
+        price: "$21.50",
+        pages: "288 Pages",
+        desc: "Anyone can lead when the waters are calm and applause is plentiful. But true leadership capacity is measured when unexpected crisis strikes, resources run dry, and betrayal tests your resolve. Joshua Adeoluwa shares battlefield-tested principles on moral courage, high-stakes decision-making, and organizational clarity.",
+        takeaways: [
+          "Navigating the 3 Leadership Crises: Identity, Resource, and Public Opposition.",
+          "How to inspire unshakeable loyalty without manipulation or fear.",
+          "The Art of Sovereign Decision-Making under incomplete information.",
+          "Developing the next tier of leaders who carry your DNA and culture."
+        ],
+        audience: [
+          "CEOs, Founders & Directors",
+          "Church & Ministry Overseers",
+          "Community & Civic Organizers",
+          "Emerging Young Leaders"
+        ],
+        excerpt: "A leader is not defined during the season of applause, but in the crucible of quiet obscurity and sudden pressure. Character cannot be improvised when the crisis arrives; it must already be forged in secret.",
+        link: "https://selar.co"
+      }
+    ];
+
+    // Mobile Hamburger
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const hambIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        hambIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      } else {
+        menu.classList.add('hidden');
+        hambIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+    }
+
+    // Theme Switch
+    function switchTheme(theme) {
+      const root = document.getElementById('body-root');
+      const headline = document.getElementById('hero-headline');
+      const halo = document.getElementById('hero-halo');
+      const nav = document.getElementById('main-nav');
+
+      if (theme === 'warm-editorial') {
+        root.className = "bg-[#FBF9F5] text-[#0A0F1D] font-sans-clean min-h-screen antialiased pb-20 sm:pb-0 font-medium";
+        nav.className = "sticky top-[47px] z-40 bg-[#FBF9F5]/95 backdrop-blur-md border-b border-stone-300";
+        headline.className = "font-editorial text-3xl sm:text-5xl lg:text-6xl font-black text-slate-950 leading-[1.12]";
+        halo.className = "absolute -inset-4 bg-amber-500/25 rounded-full blur-2xl";
+      } else if (theme === 'clean-modern') {
+        root.className = "bg-white text-slate-950 font-bold-display min-h-screen antialiased pb-20 sm:pb-0 font-semibold";
+        nav.className = "sticky top-[47px] z-40 bg-white/95 backdrop-blur-md border-b-2 border-slate-200 shadow-sm";
+        headline.className = "font-bold-display text-3xl sm:text-5xl lg:text-6xl font-black text-slate-950 leading-[1.12]";
+        halo.className = "absolute -inset-4 bg-emerald-500/25 rounded-full blur-2xl";
+      } else if (theme === 'dark-luxe') {
+        root.className = "bg-[#090D16] text-slate-100 font-sans-clean min-h-screen antialiased pb-20 sm:pb-0 font-medium";
+        nav.className = "sticky top-[47px] z-40 bg-[#090D16]/95 backdrop-blur-md border-b border-slate-800";
+        headline.className = "font-editorial text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.12]";
+        halo.className = "absolute -inset-4 bg-amber-500/30 rounded-full blur-3xl";
+      }
+    }
+
+    // View Switch
+    function switchView(view) {
+      const pubView = document.getElementById('public-view');
+      const admView = document.getElementById('admin-view');
+      const btnPub = document.getElementById('btn-tab-public');
+      const btnAdm = document.getElementById('btn-tab-admin');
+
+      if (view === 'public') {
+        pubView.classList.remove('hidden');
+        admView.classList.add('hidden');
+        btnPub.className = "px-2.5 sm:px-3 py-1 rounded-md bg-amber-500 text-slate-950 shadow font-black";
+        btnAdm.className = "px-2.5 sm:px-3 py-1 rounded-md text-slate-300 hover:text-white font-bold";
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        pubView.classList.add('hidden');
+        admView.classList.remove('hidden');
+        btnAdm.className = "px-2.5 sm:px-3 py-1 rounded-md bg-amber-500 text-slate-950 shadow font-black";
+        btnPub.className = "px-2.5 sm:px-3 py-1 rounded-md text-slate-300 hover:text-white font-bold";
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    // Filter
+    function filterCategory(cat, btn) {
+      document.querySelectorAll('.cat-pill').forEach(el => {
+        el.className = "cat-pill whitespace-nowrap px-5 py-2.5 rounded-full text-xs font-extrabold bg-white text-slate-800 border-2 border-stone-300 hover:bg-stone-100 transition";
+      });
+      btn.className = "cat-pill whitespace-nowrap px-5 py-2.5 rounded-full text-xs font-black bg-slate-950 text-white shadow-sm transition";
+
+      const items = document.querySelectorAll('.book-item');
+      items.forEach(item => {
+        if (cat === 'all' || item.getAttribute('data-category') === cat) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Search
+    function searchBooks(query) {
+      const q = query.toLowerCase().trim();
+      const items = document.querySelectorAll('.book-item');
+      items.forEach(item => {
+        const title = (item.getAttribute('data-title') || '').toLowerCase();
+        if (title.includes(q) || q === '') {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Open Comprehensive Book Details Modal
+    function openBookModal(index) {
+      const book = booksData[index] || booksData[0];
+      document.getElementById('modal-title').innerText = book.title;
+      document.getElementById('modal-tagline').innerText = book.tagline;
+      document.getElementById('modal-genre').innerText = book.genre;
+      document.getElementById('modal-price').innerText = book.price;
+      document.getElementById('modal-desc').innerText = book.desc;
+      document.getElementById('modal-pages').innerText = book.pages;
+      document.getElementById('modal-excerpt').innerText = `"${book.excerpt}"`;
+
+      // Render takeaways
+      const takeawaysContainer = document.getElementById('modal-takeaways');
+      takeawaysContainer.innerHTML = '';
+      book.takeaways.forEach(t => {
+        const div = document.createElement('div');
+        div.className = "flex items-start gap-2";
+        div.innerHTML = `<span class="text-amber-800 font-black text-sm">✓</span> <span>${t}</span>`;
+        takeawaysContainer.appendChild(div);
+      });
+
+      // Render audience
+      const audienceContainer = document.getElementById('modal-audience');
+      audienceContainer.innerHTML = '';
+      book.audience.forEach(a => {
+        const span = document.createElement('span');
+        span.className = "px-3 py-1 rounded-lg bg-stone-100 border border-stone-300 text-slate-800";
+        span.innerText = `• ${a}`;
+        audienceContainer.appendChild(span);
+      });
+
+      document.getElementById('book-modal').classList.remove('hidden');
+    }
+
+    // Open Buy Modal
+    function openBuyModal(title, price, link, formats) {
+      document.getElementById('buy-book-title').innerText = title;
+      document.getElementById('buy-book-price').innerText = price;
+      document.getElementById('buy-modal').classList.remove('hidden');
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.add('hidden');
+    }
+
+    // Admin Sync
+    function syncAdminCard() {
+      const title = document.getElementById('form-title').value || 'Book Title';
+      const category = document.getElementById('form-category').value;
+      const price = document.getElementById('form-price').value || '$0.00';
+      const desc = document.getElementById('form-desc').value;
+
+      document.getElementById('card-preview-title').innerText = title;
+      document.getElementById('card-preview-heading').innerText = title;
+      document.getElementById('card-preview-tag').innerText = category;
+      document.getElementById('card-preview-price').innerText = price;
+      document.getElementById('card-preview-desc').innerText = desc;
+    }
+  </script>
+
+</body>
+</html>

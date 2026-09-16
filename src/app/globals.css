@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #0A0F1D;
+  --background: #FBF9F5;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-weight: 500;
+}
+
+/* 3D Realistic Book Styling */
+.book-realistic {
+  box-shadow: 
+    -10px 14px 28px rgba(15, 23, 42, 0.25),
+    -2px 4px 10px rgba(15, 23, 42, 0.15),
+    inset 3px 0 6px rgba(255, 255, 255, 0.3);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.book-realistic:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: 
+    -14px 20px 36px rgba(15, 23, 42, 0.32),
+    -4px 6px 14px rgba(15, 23, 42, 0.18);
+}
+
+.book-spine-line {
+  background: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(255,255,255,0.25) 40%, rgba(0,0,0,0.15) 100%);
+}
+
+.touch-target {
+  min-height: 48px;
+}
+
+/* Hide scrollbar for category swipe */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
