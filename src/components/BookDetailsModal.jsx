@@ -37,6 +37,10 @@ export default function BookDetailsModal({ book, isOpen, onClose, onOpenBuy }) {
           {book.tagline && (
             <p className="text-sm font-bold text-amber-800">{book.tagline}</p>
           )}
+          <div className="flex items-center gap-2.5 pt-1">
+            <img src="/images/author-portrait.jpg" alt="Joshua Adeoluwa" className="w-8 h-8 rounded-full object-cover border border-amber-500" />
+            <span className="text-xs font-black text-slate-800">By Joshua Adeoluwa &middot; Published Author</span>
+          </div>
           <div className="flex items-baseline gap-2 pt-1">
             <span className="text-3xl font-black text-slate-950">{book.price}</span>
             <span className="text-xs font-black text-slate-400 uppercase">Available for Direct Order</span>

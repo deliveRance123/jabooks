@@ -59,6 +59,20 @@ export default function HeroFeatured({ book, author, onOpenDetails, onOpenBuy })
               <p className="text-center text-xs text-slate-600 font-black mt-3 flex items-center justify-center gap-1">
                 <span>📖 Tap cover for full breakdown & sample excerpt</span>
               </p>
+
+              {/* Author Verified Badge */}
+              <div className="mt-4 flex items-center gap-3 bg-white/95 p-3 rounded-2xl border-2 border-stone-300 shadow-md max-w-xs mx-auto">
+                <img
+                  src="/images/author-holding-book.jpg"
+                  alt={`${authorName} with published book`}
+                  className="w-12 h-12 rounded-xl object-cover border-2 border-amber-500 shadow flex-shrink-0"
+                />
+                <div className="text-left">
+                  <span className="text-[10px] font-black uppercase tracking-wider text-amber-800 block">Verified Author Edition</span>
+                  <p className="text-xs font-black text-slate-950 leading-tight">{authorName}</p>
+                  <p className="text-[10px] text-slate-500 font-bold">Physical Print & Digital Master</p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -100,6 +114,19 @@ export default function HeroFeatured({ book, author, onOpenDetails, onOpenBuy })
               <span className="font-black text-slate-950">5.0 / 5.0 (480+ Verified Reviews)</span>
               <span className="text-slate-300">•</span>
               <span className="text-slate-700 font-extrabold">{book.pages || '250+ Pages'}</span>
+            </div>
+
+            {/* Author Note */}
+            <div className="flex items-center gap-3.5 p-3.5 bg-amber-100/70 border border-amber-300/80 rounded-2xl">
+              <img
+                src="/images/author-portrait.jpg"
+                alt={authorName}
+                className="w-12 h-12 rounded-xl object-cover border-2 border-amber-500 shadow-sm flex-shrink-0"
+              />
+              <div className="text-xs font-bold text-slate-900 leading-snug">
+                <span className="font-extrabold text-slate-950 block">{authorName} &middot; Author Statement:</span>
+                &ldquo;Every principle in this book was distilled from disciplined study and real-world execution to elevate your focus.&rdquo;
+              </div>
             </div>
 
             {/* Pricing & CTA Card */}
