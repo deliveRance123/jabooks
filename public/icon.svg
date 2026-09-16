@@ -1,0 +1,27 @@
+<svg width="64" height="64" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#0B0F19" />
+      <stop offset="100%" stopColor="#070A11" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FDE68A" />
+      <stop offset="40%" stopColor="#F59E0B" />
+      <stop offset="100%" stopColor="#D97706" />
+    </linearGradient>
+  </defs>
+
+  <!-- Dark Rounded Container -->
+  <rect x="2" y="2" width="96" height="96" rx="26" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="3" />
+
+  <!-- Stylized Book Wings -->
+  <path d="M26 68C34 65 44 65 50 69C56 65 66 65 74 68V34C66 31 56 31 50 35C44 31 34 31 26 34V68Z" fill="url(#goldGrad)" fill-opacity="0.2" stroke="url(#goldGrad)" stroke-width="2" />
+
+  <!-- Monogram JA -->
+  <path d="M50 22L33 64H41L50 41L59 64H67L50 22Z" fill="url(#goldGrad)" />
+  <path d="M40 52H60" stroke="#0B0F19" stroke-width="3.5" stroke-linecap="round" />
+  <path d="M50 28V53C50 61 44 64 38 64C34 64 31 62 30 60" stroke="url(#goldGrad)" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Diamond Star -->
+  <path d="M50 14L52.5 19L50 24L47.5 19L50 14Z" fill="#FDE68A" />
+</svg>

@@ -22,24 +22,16 @@ export async function POST(request) {
   try {
     const { email, push_subscription } = await request.json();
 
-    if (!email && !push_subscription) {
-      return NextResponse.json({ success: false, error: 'Email or Push subscription required' }, { status: 400 });
+    if (!email || !email.includes('@')) {
+      return NextResponse.json({ success: false, error: 'Please enter a valid email address.' }, { status: 400 });
     }
 
-    // Save or update subscriber
-    if (email) {
-      await sql`
-        INSERT INTO subscribers (email, push_subscription)
-        VALUES (${email.trim().toLowerCase()}, ${push_subscription ? JSON.stringify(push_subscription) : null}::jsonb)
-        ON CONFLICT (email) 
-        DO UPDATE SET push_subscription = COALESCE(EXCLUDED.push_subscription, subscribers.push_subscription)
-      `;
-    } else if (push_subscription) {
-      await sql`
-        INSERT INTO subscribers (push_subscription)
-        VALUES (${JSON.stringify(push_subscription)}::jsonb)
-      `;
-    }
+    // Save subscriber
+    await sql`
+      INSERT INTO subscribers (email)
+      VALUES (${email.trim().toLowerCase()})
+      ON CONFLICT (email) DO NOTHING
+    `;
 
     return NextResponse.json({
       success: true,

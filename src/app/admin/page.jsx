@@ -331,7 +331,7 @@ export default function AdminDashboardPage() {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
                 </svg>
-                <span>Readers & Web Push</span>
+                <span>Newsletter Subscribers</span>
               </div>
               <span className={`px-2 py-0.5 rounded-full text-[10px] font-black ${
                 activeTab === 'subscribers' ? 'bg-slate-950 text-amber-400' : 'bg-slate-800 text-slate-300'
@@ -414,7 +414,7 @@ export default function AdminDashboardPage() {
               <h2 className="font-black text-white text-base sm:text-lg tracking-tight">
                 {activeTab === 'books' && 'Book Management & Publishing'}
                 {activeTab === 'profile' && 'Author Biography & Social Links'}
-                {activeTab === 'subscribers' && 'VIP Readers & Web Push Audience'}
+                {activeTab === 'subscribers' && 'Newsletter Subscribers & Reader Circle'}
               </h2>
               <p className="text-xs text-slate-400 font-semibold hidden sm:block">
                 All changes synchronize directly with your live Neon PostgreSQL database.
@@ -992,14 +992,14 @@ export default function AdminDashboardPage() {
           )}
 
           {/* ========================================================================= */}
-          {/* TAB 3: READERS & BROWSER PUSH NOTIFICATIONS */}
+          {/* TAB 3: NEWSLETTER SUBSCRIBERS */}
           {/* ========================================================================= */}
           {activeTab === 'subscribers' && (
             <div className="bg-[#0C101D] border border-slate-800/90 rounded-3xl p-6 sm:p-8 shadow-xl max-w-3xl space-y-6">
               <div className="border-b border-slate-800 pb-3">
-                <h3 className="font-black text-white text-base">VIP Readers & Browser Push Notifications</h3>
+                <h3 className="font-black text-white text-base">Newsletter Subscribers</h3>
                 <p className="text-xs text-slate-400 font-bold">
-                  Real subscriber list stored in your Neon database.
+                  Active reader subscription list stored in your Neon database.
                 </p>
               </div>
 
@@ -1009,36 +1009,8 @@ export default function AdminDashboardPage() {
                   <span className="text-3xl font-black text-amber-400">{subscriberCount}</span>
                 </div>
                 <span className="px-3 py-1 rounded-full text-xs font-black bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
-                  ● Web Push Active
+                  ● Database Synced
                 </span>
-              </div>
-
-              <div className="p-4 bg-slate-900/90 rounded-2xl border border-slate-700 space-y-2">
-                <h4 className="text-xs font-black uppercase text-amber-400">Test Push Notification on This Device</h4>
-                <p className="text-xs text-slate-300 font-bold">
-                  Click below to trigger a live browser notification through the registered service worker.
-                </p>
-                <button
-                  onClick={() => {
-                    if ('Notification' in window) {
-                      Notification.requestPermission().then(perm => {
-                        if (perm === 'granted' && navigator.serviceWorker) {
-                          navigator.serviceWorker.ready.then(reg => {
-                            reg.showNotification("Joshua Adeoluwa — Author Studio Alert", {
-                              body: "Test notification: Web Push is operational across your subscriber network!",
-                              icon: '/favicon.ico'
-                            });
-                          });
-                        } else {
-                          alert('Please allow notifications in your browser settings to test.');
-                        }
-                      });
-                    }
-                  }}
-                  className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs shadow"
-                >
-                  Send Test Notification Now
-                </button>
               </div>
 
               <div className="space-y-3">

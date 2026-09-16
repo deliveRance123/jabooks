@@ -9,7 +9,6 @@ import Newsletter from './Newsletter';
 import BookDetailsModal from './BookDetailsModal';
 import BuyStoreModal from './BuyStoreModal';
 import StickyMobileBar from './StickyMobileBar';
-import Link from 'next/link';
 
 export default function HomeClient({ initialBooks, initialSettings }) {
   const [books] = useState(initialBooks || []);
@@ -54,11 +53,6 @@ export default function HomeClient({ initialBooks, initialSettings }) {
         <div className="max-w-7xl mx-auto px-4 space-y-3">
           <p className="font-editorial text-2xl text-slate-950 font-black">{author.name}</p>
           <p>© {new Date().getFullYear()} {author.name}. All rights reserved. Powered by Next.js & Neon PostgreSQL on Vercel.</p>
-          <div className="pt-1">
-            <Link href="/admin" className="text-slate-700 hover:text-slate-950 text-xs underline font-black">
-              Author Admin Dashboard
-            </Link>
-          </div>
         </div>
       </footer>
 

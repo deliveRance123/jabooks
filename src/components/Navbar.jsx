@@ -2,13 +2,13 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Logo from './Logo';
 
 export default function Navbar({ author }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const authorName = author?.name || 'Joshua Adeoluwa';
   const authorTagline = author?.tagline || 'Author & Strategic Thinker';
-  const authorInitial = authorName.charAt(0) || 'J';
 
   return (
     <nav className="sticky top-0 z-40 bg-[#FBF9F5]/95 backdrop-blur-md border-b border-stone-300 transition-colors">
@@ -16,9 +16,7 @@ export default function Navbar({ author }) {
         
         {/* Brand Logo & Name */}
         <Link href="#featured" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-full bg-slate-950 text-amber-400 flex items-center justify-center font-black text-xl border-2 border-amber-500 shadow-sm group-hover:scale-105 transition">
-            {authorInitial}
-          </div>
+          <Logo size={42} className="group-hover:scale-105 transition flex-shrink-0" />
           <div>
             <h1 className="font-editorial text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950 leading-none">
               {authorName}
@@ -37,17 +35,8 @@ export default function Navbar({ author }) {
           <a href="#newsletter" className="hover:text-amber-700 transition">VIP Reader Club</a>
         </div>
 
-        {/* Desktop CTA / Admin Link */}
+        {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <Link
-            href="/admin"
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl border-2 border-slate-300 text-xs font-bold text-slate-800 hover:border-slate-900 hover:bg-white transition"
-          >
-            <svg className="w-4 h-4 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-            </svg>
-            Author Portal
-          </Link>
           <a
             href="#catalog"
             className="px-5 py-2.5 rounded-xl bg-slate-950 hover:bg-slate-800 text-white text-xs sm:text-sm font-extrabold shadow-md transition"
@@ -114,17 +103,7 @@ export default function Navbar({ author }) {
             </a>
           </div>
 
-          <div className="pt-4 border-t border-stone-200 space-y-2">
-            <Link
-              href="/admin"
-              onClick={() => setMobileMenuOpen(false)}
-              className="touch-target w-full py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-900 font-extrabold text-sm flex items-center justify-center gap-2 border border-stone-300"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-              </svg>
-              Author Admin Portal
-            </Link>
+          <div className="pt-4 border-t border-stone-200">
             <a
               href="#catalog"
               onClick={() => setMobileMenuOpen(false)}
